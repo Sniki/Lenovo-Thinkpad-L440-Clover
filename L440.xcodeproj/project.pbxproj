@@ -6,10 +6,23 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		DF16389F22B5BCFB0068E8B0 /* hotpatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hotpatch; sourceTree = "<group>"; };
+		DF1638A022B5BCFB0068E8B0 /* SystemLogo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SystemLogo; sourceTree = "<group>"; };
+		DF1638A122B5BCFB0068E8B0 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		DF1638A322B5BD020068E8B0 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+		DF1638A422B5BE450068E8B0 /* SSDT-L440.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-L440.aml"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		DF16389822B5BCC90068E8B0 = {
 			isa = PBXGroup;
 			children = (
+				DF1638A422B5BE450068E8B0 /* SSDT-L440.aml */,
+				DF1638A122B5BCFB0068E8B0 /* config.plist */,
+				DF1638A322B5BD020068E8B0 /* Audio */,
+				DF16389F22B5BCFB0068E8B0 /* hotpatch */,
+				DF1638A022B5BCFB0068E8B0 /* SystemLogo */,
 			);
 			sourceTree = "<group>";
 		};
