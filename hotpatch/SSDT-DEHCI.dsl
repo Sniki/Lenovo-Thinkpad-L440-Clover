@@ -64,4 +64,3 @@ DefinitionBlock("", "SSDT", 2, "L440", "_DEHCI", 0)
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
-//EOF

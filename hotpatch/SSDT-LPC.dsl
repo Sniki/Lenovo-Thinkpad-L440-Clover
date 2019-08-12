@@ -60,4 +60,3 @@ DefinitionBlock("", "SSDT", 2, "L440", "_LPC", 0)
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
-//EOF
