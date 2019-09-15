@@ -53,6 +53,21 @@ DefinitionBlock ("", "SSDT", 2, "L440", "_USB", 0)
             },
         })
     }
+    // In DSDT, native ESEL is renamed ESEX
+    // As a result, calls to it land here.
+    External(_SB.PCI0.XHC, DeviceObj)
+    Method(_SB.PCI0.XHC.ESEL)
+    {
+        // do nothing
+    }
+    Method(_SB.PCI0.XHC.XSEL)
+    {
+        // do nothing
+    }
+    Method(_SB.PCI0.XHC.XWAK)
+    {
+        // do nothing
+    }
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif

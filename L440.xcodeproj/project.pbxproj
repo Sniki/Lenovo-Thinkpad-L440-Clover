@@ -13,15 +13,15 @@
 		DF1638A322B5BD020068E8B0 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
 		DF62A0B522C80FE600CBAFBB /* Themes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Themes; sourceTree = "<group>"; };
 		DF62A0B622C8103B00CBAFBB /* kexts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kexts; sourceTree = "<group>"; };
-		DF7A17132301C28900618A04 /* SSDT-L440.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-L440.aml"; sourceTree = "<group>"; };
+		DFD7F6BB232E56C200203591 /* SSDT-L440.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-L440.aml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DF16389822B5BCC90068E8B0 = {
 			isa = PBXGroup;
 			children = (
-				DF7A17132301C28900618A04 /* SSDT-L440.aml */,
 				DF1638A122B5BCFB0068E8B0 /* config.plist */,
+				DFD7F6BB232E56C200203591 /* SSDT-L440.aml */,
 				DF62A0B622C8103B00CBAFBB /* kexts */,
 				DF62A0B522C80FE600CBAFBB /* Themes */,
 				DF1638A322B5BD020068E8B0 /* Audio */,
