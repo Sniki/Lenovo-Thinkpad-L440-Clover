@@ -36,7 +36,7 @@
 		DF16389922B5BCC90068E8B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1110;
 			};
 			buildConfigurationList = DF16389C22B5BCC90068E8B0 /* Build configuration list for PBXProject "L440" */;
 			compatibilityVersion = "Xcode 9.3";
