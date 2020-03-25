@@ -1,9 +1,7 @@
 // USB Ports Injector for Lenovo ThinkPad L440
 
-#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock ("", "SSDT", 2, "L440", "_USB", 0)
 {
-#endif
     Device(UIAC)
     {
         Name(_HID, "UIA00000")
@@ -14,7 +12,7 @@ DefinitionBlock ("", "SSDT", 2, "L440", "_USB", 0)
                 "port-count", Buffer() { 21, 0, 0, 0 },
                 "ports", Package()
                 {
-                    "HS01", Package() // USB3 Port - USB2 Device Connected (TopLeft)
+                    "HS01", Package() // USB3 Port - USB2 Device (TopLeft)
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 1, 0, 0, 0 },
@@ -53,21 +51,4 @@ DefinitionBlock ("", "SSDT", 2, "L440", "_USB", 0)
             },
         })
     }
-    // In DSDT, native ESEL is renamed ESEX
-    // As a result, calls to it land here.
-    External(_SB.PCI0.XHC, DeviceObj)
-    Method(_SB.PCI0.XHC.ESEL)
-    {
-        // do nothing
-    }
-    Method(_SB.PCI0.XHC.XSEL)
-    {
-        // do nothing
-    }
-    Method(_SB.PCI0.XHC.XWAK)
-    {
-        // do nothing
-    }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif

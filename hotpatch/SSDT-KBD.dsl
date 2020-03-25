@@ -1,49 +1,119 @@
 // Lenovo ThinkPad L440 Keyboard Map.
 
-#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "L440", "_KBD", 0)
 {
-#endif
-    External (_SB.PCI0.LPCB.EC, DeviceObj)
+    External (_SB.PCI0.LPCB.H_EC, DeviceObj)
     External (_SB.PCI0.LPCB.KBD, DeviceObj)
-
-    Scope (_SB.PCI0.LPCB.EC)
+    External (_SB.PCI0.LPCB.H_EC.XQ1C, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ1D, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ28, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ19, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ2A, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ66, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ67, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ68, MethodObj)
+    External (_SB.PCI0.LPCB.H_EC.XQ69, MethodObj)
+    
+    Scope (_SB.PCI0.LPCB.H_EC)
     {
         Method (_Q1C, 0, NotSerialized) // (F15) Brightness Up
         {
-            Notify (KBD, 0x0406)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x0406)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ1C ()
+            }
         }
         Method (_Q1D, 0, NotSerialized) // (F14) Brightness Down
         {
-            Notify (KBD, 0x0405)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x0405)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ1D ()
+            }
         }
         Method (_Q28, 0, NotSerialized) // (F4) Microphone Mute - Siri
         {
-            Notify (KBD, 0x033E)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x033E)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ28 ()
+            }
         }
         Method (_Q19, 0, NotSerialized) // Projector - Video/Mirror Toggle
         {
-            Notify (KBD, 0x046E)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x046E)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ19 ()
+            }
         }
         Method (_Q2A, 0, NotSerialized) // (F8) Radio On/Off - Notification Center (SysPrefs>Keyboard>Shortcuts)
         {
-            Notify (KBD, 0x0342)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x0342)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ2A ()
+            }
         }
         Method (_Q66, 0, NotSerialized) // (F16) Settings - System Preferences (SysPrefs>Keyboard>Shortcuts)
         {
-            Notify (KBD, 0x0367)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x0367)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ66 ()
+            }
         }
         Method (_Q67, 0, NotSerialized) // (F17) (Cortana) - Spotlight Search (SysPrefs>Keyboard>Shortcuts)
         {
-            Notify (KBD, 0x0368)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x0368)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ67 ()
+            }
         }
         Method (_Q68, 0, NotSerialized) // (F18) App Switcher - Mission Control (SysPrefs>Keyboard>Shortcuts)
         {
-            Notify (KBD, 0x0369)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x0369)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ68 ()
+            }
         }
         Method (_Q69, 0, NotSerialized) // (F19) Start Menu - Launchpad (SysPrefs>Keyboard>Shortcuts)
         {
-            Notify (KBD, 0x036A)
+            If (_OSI ("Darwin"))
+            {
+                Notify (KBD, 0x036A)
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.H_EC.XQ69 ()
+            }
         }
     }
     Scope (_SB.PCI0.LPCB.KBD)
@@ -97,6 +167,4 @@ DefinitionBlock("", "SSDT", 2, "L440", "_KBD", 0)
             },  
         })
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif

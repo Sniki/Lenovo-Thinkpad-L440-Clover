@@ -1,30 +1,30 @@
-// For solving instant wake by hooking GPRW or UPRW
+// Instant Wake Fix
 
-#ifndef NO_DEFINITIONBLOCK
-DefinitionBlock("", "SSDT", 2, "L440", "_GPRW", 0)
+DefinitionBlock ("", "SSDT", 2, "L440", "_GPRW", 0)
 {
-#endif
     External(XPRW, MethodObj)
-    External(RMCF.DWOU, IntObj)
-
-    // In DSDT, native GPRW is renamed to XPRW with Clover binpatch.
-    // As a result, calls to GPRW land here.
-    // The purpose of this implementation is to avoid "instant wake"
-    // by returning 0 in the second position (sleep state supported)
-    // of the return package.
-    Method(GPRW, 2)
+    Method (GPRW, 2, NotSerialized)
     {
-        For (,,)
+        If (_OSI ("Darwin"))
         {
-            // when RMCF.DWOU is provided and is zero, patch disabled
-            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
-            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
-            If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
-            If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
-            Break
+            If ((0x6D == Arg0))
+            {
+                Return (Package ()
+                {
+                    0x6D, 
+                    Zero
+                })
+            }
+
+            If ((0x0D == Arg0))
+            {
+                Return (Package ()
+                {
+                    0x0D, 
+                    Zero
+                })
+            }
         }
-        Return (XPRW(Arg0, Arg1))
+        Return (XPRW (Arg0, Arg1))
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
