@@ -11,9 +11,9 @@
 		DF1638A022B5BCFB0068E8B0 /* SystemLogo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SystemLogo; sourceTree = "<group>"; };
 		DF1638A122B5BCFB0068E8B0 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		DF1638A322B5BD020068E8B0 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+		DF2B359D242BFAE400082ACD /* ACPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ACPI; sourceTree = "<group>"; };
 		DF62A0B522C80FE600CBAFBB /* Themes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Themes; sourceTree = "<group>"; };
 		DF62A0B622C8103B00CBAFBB /* kexts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kexts; sourceTree = "<group>"; };
-		DFD7F6BB232E56C200203591 /* SSDT-L440.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-L440.aml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -21,7 +21,7 @@
 			isa = PBXGroup;
 			children = (
 				DF1638A122B5BCFB0068E8B0 /* config.plist */,
-				DFD7F6BB232E56C200203591 /* SSDT-L440.aml */,
+				DF2B359D242BFAE400082ACD /* ACPI */,
 				DF62A0B622C8103B00CBAFBB /* kexts */,
 				DF62A0B522C80FE600CBAFBB /* Themes */,
 				DF1638A322B5BD020068E8B0 /* Audio */,
